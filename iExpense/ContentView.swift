@@ -30,7 +30,7 @@ struct ContentView: View {
                 }
                 .onDelete(perform: removeItems)
             }
-            .navigationTitle("iExpense")
+            .navigationTitle("iExpenseChanged")
             .toolbar {
                 Button {
                     showingAddExpense = true
