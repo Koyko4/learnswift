@@ -44,7 +44,7 @@ struct AddView: View {
                     }
                 }
             }
-            .navigationBarTitle("Add new expense")
+            .navigationBarTitle("Add New Expense")
             .navigationBarItems(trailing:
                 Button("Save") {
                     if let actualAmount = Double(amount) {
