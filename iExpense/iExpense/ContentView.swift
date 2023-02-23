@@ -8,45 +8,60 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var expenses = Expenses()
-    @State private var showingAddExpense = false
-
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
+    @ObservedObject var expenses = Expenses()
+    
+    private let currencies = ["USD", "EUR", "GBP", "JPY", "CNY"] // available currencies
+    @State private var showingAddExpense = false // to show the AddView
+    @State private var currencySymbol: String
+    
+    init() {
+        _ = Locale.current.currency?.identifier ?? "USD"
+            let locale = Locale(identifier: Locale.current.identifier)
+            self.currencySymbol = locale.currencySymbol ?? "$"
+        }
+        
+        var body: some View {
+            NavigationView {
+                List {
+                    ForEach(expenses.items) { item in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                    .font(.headline)
+                                Text(item.type)
+                            }
+                            
+                            Spacer()
+                            
+                            Text("\(item.currencySymbol)\(item.amount, specifier: "%.2f")")
+                                .foregroundColor(item.amount < 10 ? .green : item.amount < 100 ? .orange : .red)
                         }
-
-                        Spacer()
-
-                        Text(item.amount, format: .currency(code: "USD"))
                     }
+                    .onDelete(perform: removeItems)
                 }
-                .onDelete(perform: removeItems)
-            }
-            .navigationTitle("iExpense")
-            .toolbar {
-                Button {
-                    showingAddExpense = true
-                } label: {
-                    Image(systemName: "plus")
+                .navigationBarTitle("iExpense")
+                .navigationBarItems(
+                    leading: EditButton(),
+                    trailing:
+                    Button(action: {
+                        self.showingAddExpense = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                )
+                .sheet(isPresented: $showingAddExpense) {
+                    AddView(expenses: self.expenses, onCommit: { currency in
+                        let locale = Locale(identifier: Locale.current.identifier)
+                        self.currencySymbol = locale.currencySymbol ?? "$"
+                    })
                 }
-            }
-            .sheet(isPresented: $showingAddExpense) {
-                AddView(expenses: expenses)
             }
         }
+        
+        func removeItems(at offsets: IndexSet) {
+            expenses.items.remove(atOffsets: offsets)
+        }
     }
-
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
