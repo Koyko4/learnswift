@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var expenses = Expenses()
-    
     private let currencies = ["USD", "EUR", "GBP", "JPY", "CNY"] // available currencies
-    @State private var showingAddExpense = false // to show the AddView
     @State private var currencySymbol: String
+    @State private var showingAddExpense = false // to show the AddView
+    
     
     init() {
         _ = Locale.current.currency?.identifier ?? "USD"
@@ -34,7 +34,7 @@ struct ContentView: View {
                             Spacer()
                             
                             Text("\(item.currencySymbol)\(item.amount, specifier: "%.2f")")
-                                .foregroundColor(item.amount < 10 ? .green : item.amount < 100 ? .orange : .red)
+                                                        .foregroundColor(getAmountColor(amount: item.amount))
                         }
                     }
                     .onDelete(perform: removeItems)
@@ -60,6 +60,16 @@ struct ContentView: View {
         
         func removeItems(at offsets: IndexSet) {
             expenses.items.remove(atOffsets: offsets)
+        }
+    
+    func getAmountColor(amount: Double) -> Color {
+            if amount < 10 {
+                return .green
+            } else if amount < 100 {
+                return .orange
+            } else {
+                return .red
+            }
         }
     }
 
