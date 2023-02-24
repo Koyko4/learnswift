@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2B2C40BE29A81F95006A2919 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40BD29A81F95006A2919 /* iExpenseApp.swift */; };
-		2B2C40C029A81F95006A2919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40BF29A81F95006A2919 /* ContentView.swift */; };
+		2B2C40C029A81F95006A2919 /* GPTContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40BF29A81F95006A2919 /* GPTContentView.swift */; };
 		2B2C40C229A81F97006A2919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2C40C129A81F97006A2919 /* Assets.xcassets */; };
 		2B2C40C529A81F97006A2919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2C40C429A81F97006A2919 /* Preview Assets.xcassets */; };
-		2B2C40CC29A82099006A2919 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40CB29A82099006A2919 /* AddView.swift */; };
-		2B2C40CE29A820DF006A2919 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40CD29A820DF006A2919 /* ExpenseItem.swift */; };
-		2B2C40D029A820F3006A2919 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40CF29A820F3006A2919 /* Expenses.swift */; };
+		2B2C40CC29A82099006A2919 /* GPTAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40CB29A82099006A2919 /* GPTAddView.swift */; };
+		2B2C40CE29A820DF006A2919 /* GPTExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40CD29A820DF006A2919 /* GPTExpenseItem.swift */; };
+		2B2C40D029A820F3006A2919 /* GPTExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C40CF29A820F3006A2919 /* GPTExpenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B2C40BA29A81F95006A2919 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2C40BA29A81F95006A2919 /* GPTiExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTiExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2C40BD29A81F95006A2919 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
-		2B2C40BF29A81F95006A2919 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B2C40BF29A81F95006A2919 /* GPTContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTContentView.swift; sourceTree = "<group>"; };
 		2B2C40C129A81F97006A2919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2C40C429A81F97006A2919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2B2C40CB29A82099006A2919 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
-		2B2C40CD29A820DF006A2919 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
-		2B2C40CF29A820F3006A2919 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		2B2C40CB29A82099006A2919 /* GPTAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTAddView.swift; sourceTree = "<group>"; };
+		2B2C40CD29A820DF006A2919 /* GPTExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTExpenseItem.swift; sourceTree = "<group>"; };
+		2B2C40CF29A820F3006A2919 /* GPTExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTExpenses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 		2B2C40BB29A81F95006A2919 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B2C40BA29A81F95006A2919 /* iExpense.app */,
+				2B2C40BA29A81F95006A2919 /* GPTiExpense.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,10 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				2B2C40BD29A81F95006A2919 /* iExpenseApp.swift */,
-				2B2C40BF29A81F95006A2919 /* ContentView.swift */,
-				2B2C40CD29A820DF006A2919 /* ExpenseItem.swift */,
-				2B2C40CF29A820F3006A2919 /* Expenses.swift */,
-				2B2C40CB29A82099006A2919 /* AddView.swift */,
+				2B2C40BF29A81F95006A2919 /* GPTContentView.swift */,
+				2B2C40CD29A820DF006A2919 /* GPTExpenseItem.swift */,
+				2B2C40CF29A820F3006A2919 /* GPTExpenses.swift */,
+				2B2C40CB29A82099006A2919 /* GPTAddView.swift */,
 				2B2C40C129A81F97006A2919 /* Assets.xcassets */,
 				2B2C40C329A81F97006A2919 /* Preview Content */,
 			);
@@ -79,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2B2C40B929A81F95006A2919 /* iExpense */ = {
+		2B2C40B929A81F95006A2919 /* GPTiExpense */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B2C40C829A81F97006A2919 /* Build configuration list for PBXNativeTarget "iExpense" */;
+			buildConfigurationList = 2B2C40C829A81F97006A2919 /* Build configuration list for PBXNativeTarget "GPTiExpense" */;
 			buildPhases = (
 				2B2C40B629A81F95006A2919 /* Sources */,
 				2B2C40B729A81F95006A2919 /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = iExpense;
+			name = GPTiExpense;
 			productName = iExpense;
-			productReference = 2B2C40BA29A81F95006A2919 /* iExpense.app */;
+			productReference = 2B2C40BA29A81F95006A2919 /* GPTiExpense.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2B2C40B529A81F95006A2919 /* Build configuration list for PBXProject "iExpense" */;
+			buildConfigurationList = 2B2C40B529A81F95006A2919 /* Build configuration list for PBXProject "GPTiExpense" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2B2C40B929A81F95006A2919 /* iExpense */,
+				2B2C40B929A81F95006A2919 /* GPTiExpense */,
 			);
 		};
 /* End PBXProject section */
@@ -146,11 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B2C40D029A820F3006A2919 /* Expenses.swift in Sources */,
-				2B2C40C029A81F95006A2919 /* ContentView.swift in Sources */,
+				2B2C40D029A820F3006A2919 /* GPTExpenses.swift in Sources */,
+				2B2C40C029A81F95006A2919 /* GPTContentView.swift in Sources */,
 				2B2C40BE29A81F95006A2919 /* iExpenseApp.swift in Sources */,
-				2B2C40CC29A82099006A2919 /* AddView.swift in Sources */,
-				2B2C40CE29A820DF006A2919 /* ExpenseItem.swift in Sources */,
+				2B2C40CC29A82099006A2919 /* GPTAddView.swift in Sources */,
+				2B2C40CE29A820DF006A2919 /* GPTExpenseItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B2C40B529A81F95006A2919 /* Build configuration list for PBXProject "iExpense" */ = {
+		2B2C40B529A81F95006A2919 /* Build configuration list for PBXProject "GPTiExpense" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B2C40C629A81F97006A2919 /* Debug */,
@@ -339,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B2C40C829A81F97006A2919 /* Build configuration list for PBXNativeTarget "iExpense" */ = {
+		2B2C40C829A81F97006A2919 /* Build configuration list for PBXNativeTarget "GPTiExpense" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B2C40C929A81F97006A2919 /* Debug */,
