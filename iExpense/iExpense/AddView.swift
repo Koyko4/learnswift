@@ -18,7 +18,7 @@ struct AddView: View {
     let onCommit: (String) -> Void // closure to pass the selected currency symbol back to the ContentView
     @State private var selectedCurrency = "USD" // selected currency symbol
     @Environment(\.presentationMode) var presentationMode // to dismiss the view
-
+    
     // ...
     
     var body: some View {
@@ -46,16 +46,16 @@ struct AddView: View {
             }
             .navigationBarTitle("Add New Expense")
             .navigationBarItems(trailing:
-                Button("Save") {
-                    if let actualAmount = Double(amount) {
-                        let item = ExpenseItem(name: name, type: type, amount: actualAmount, currencySymbol: selectedCurrency)
-                        expenses.items.append(item)
-                        onCommit(selectedCurrency) // pass the selected currency back to the ContentView
-                        presentationMode.wrappedValue.dismiss()
-                    } else {
-                        showingAlert = true
-                    }
+                                    Button("Save") {
+                if let actualAmount = Double(amount) {
+                    let item = ExpenseItem(name: name, type: type, amount: actualAmount, currencySymbol: selectedCurrency)
+                    expenses.items.append(item)
+                    onCommit(selectedCurrency) // pass the selected currency back to the ContentView
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    showingAlert = true
                 }
+            }
                 .alert(isPresented: $showingAlert) {
                     Alert(title: Text("Invalid amount"), message: Text("Please enter a valid amount."), dismissButton: .default(Text("OK")))
                 }

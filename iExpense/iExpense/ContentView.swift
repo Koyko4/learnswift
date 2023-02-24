@@ -57,12 +57,12 @@ struct ContentView: View {
     }
     
     func removeItems(at offsets: IndexSet) {
-            for index in offsets {
-                if let itemIndex = expenses.items.firstIndex(where: { $0.id == expenses.items[index].id }) {
-                    expenses.items.remove(at: itemIndex)
-                }
+        for index in offsets {
+            if let itemIndex = expenses.items.firstIndex(where: { $0.id == expenses.items[index].id }) {
+                expenses.items.remove(at: itemIndex)
             }
         }
+    }
     
     private func rowView(item: ExpenseItem) -> some View {
         HStack {
